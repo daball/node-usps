@@ -1,0 +1,15 @@
+{
+  "name": "node-usps",
+  "version": "0.0.1",
+  "description": "Node.JS library to comply with USPS Publication 28 address guidelines.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests"
+  },
+  "dependencies": {
+    "clone": "*"
+  },
+  "repository": "",
+  "author": "David Ball",
+  "license": "BSD"
+}
