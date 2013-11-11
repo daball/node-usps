@@ -1,6 +1,5 @@
 // Implements January 2013 version of USPS Publication 28.
 
-var clone = require('clone');
 var abbreviations = require('./abbreviations');
 
 var AddressBuilderClass = function () {
@@ -47,7 +46,7 @@ var AddressBuilderClass = function () {
  * Creates a copy of this address object.
  */
 AddressBuilderClass.prototype.clone = function () {
-  return clone(this);
+  return require('clone')(this);
 };
 
 /**
@@ -156,7 +155,7 @@ AddressBuilderClass.prototype.abbreviate = function () {
     }
     //try using spelling corrections spelling correction
     if (!found) for (var misspelled in abbreviations.CommonlyMisspelledStreetNameSuffixes) {
-      var regexmatch = copy.StreetName.trim().match(new RegExp(suffix+'$', 'i'));
+      var regexmatch = copy.StreetName.trim().match(new RegExp(misspelled+'$', 'i'));
       if (regexmatch != null && regexmatch.length > 0) {
         copy.StreetName = copy.StreetName.substring(0, regexmatch.index) +
                           abbreviations.CommonlyMisspelledStreetNameSuffixes[misspelled].abbreviation;
