@@ -286,7 +286,7 @@ AddressBuilderClass.prototype.toString = function () {
  * and returns a string representing the full address as specified.
  */
 AddressBuilderClass.prototype.toUSPSString = function () {
-  clone = this.clone().removePunctuation().abbreviate().capitalize().toString();
+  return this.clone().removePunctuation().abbreviate().capitalize().toString();
 };
 
 // export class
