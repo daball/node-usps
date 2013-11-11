@@ -154,6 +154,16 @@ AddressBuilderClass.prototype.abbreviate = function () {
         break;
       }
     }
+    //try using spelling corrections spelling correction
+    if (!found) for (var misspelled in abbreviations.CommonlyMisspelledStreetNameSuffixes) {
+      var regexmatch = copy.StreetName.trim().match(new RegExp(suffix+'$', 'i'));
+      if (regexmatch != null && regexmatch.length > 0) {
+        copy.StreetName = copy.StreetName.substring(0, regexmatch.index) +
+                          abbreviations.CommonlyMisspelledStreetNameSuffixes[misspelled].abbreviation;
+        found = true;
+        break;
+      }
+    }
   }
 
   //abbreviate predirectional
