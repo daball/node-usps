@@ -4,12 +4,17 @@
   "description": "Node.JS library to comply with USPS Publication 28 address guidelines.",
   "main": "index.js",
   "scripts": {
-    "test": "node tests"
+    "test": "nodejs tests"
   },
   "dependencies": {
-    "clone": "*"
+    "clone": "*",
+    "extend": "*"
   },
   "repository": "",
-  "author": "David Ball",
+  "author": {
+    "name": "David Ball",
+    "email": "david@daball.me",
+    "url": "http://www.daball.me/"
+  },
   "license": "BSD"
 }
