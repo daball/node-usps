@@ -1,6 +1,6 @@
 {
   "name": "node-usps",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node.JS library to comply with USPS Publication 28 address guidelines.",
   "main": "index.js",
   "scripts": {
